@@ -17,9 +17,7 @@ class DogViewModel @Inject constructor(private val repository: DogRepository) : 
 
     private val cache = LruCache<Int, String>(20)  // Caches images (20 max)
     private var counter = 0
-
     var dogImages = mutableStateListOf<String>()
-
     init {
         restoreFromCache()
     }
